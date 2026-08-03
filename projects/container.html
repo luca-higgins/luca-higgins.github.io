@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Container — Luca Higgins</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-inner">
+    <a class="brand" href="../index.html">luca<span>.</span>higgins</a>
+    <input type="checkbox" id="nav-toggle">
+    <label for="nav-toggle" class="nav-toggle-label">&#9776;</label>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../projects.html">Projects</a></li>
+        <li><a href="../coursework.html">Coursework</a></li>
+        <li><a href="../resume.html">Resume</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <a class="back-link" style="color:#cbd5e1;" href="../coursework.html">&larr; All coursework</a>
+    <div class="eyebrow" style="margin-top:14px;">Coursework &middot; ME 102, Project 1</div>
+    <h1>Container</h1>
+    <p class="lead">A laser-cut hexagonal container for my dog's treats, built entirely from friction-fit joints.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+
+    <div class="project-meta">
+      <div><strong>Course</strong>ME 102, Product Realization Lab</div>
+      <div><strong>Timeline</strong>Winter 2026</div>
+      <div><strong>Processes</strong>Laser cutting, friction-fit joinery</div>
+    </div>
+
+    <div class="project-section">
+      <h3>Objective</h3>
+      <p>Design and build a container using friction fit joints — no glue, no fasteners. I designed mine to hold my dog's treats, which pushed me toward a hexagonal form I thought would look clean but that turned out to be a much harder friction-fit problem than a rectangular box.</p>
+    </div>
+
+    <div class="photo-gallery featured">
+      <figure><img src="../assets/images/container-cad.jpg" alt="Final CAD render of the hexagonal container"></figure>
+      <figure><img src="../assets/images/container-final-held.jpg" alt="Finished container held in hand"></figure>
+    </div>
+
+    <div class="project-section">
+      <h3>Design &amp; Prototyping</h3>
+      <p>I started with conceptual sketches of the hexagonal shape, then built an initial prototype out of cardboard and tape just to get the shape right, before finalizing the geometry in CAD.</p>
+    </div>
+
+    <div class="photo-gallery">
+      <figure><img src="../assets/images/container-cardboard-prototype.jpg" alt="Cardboard prototype of the container"></figure>
+      <figure><img src="../assets/images/container-topview.jpg" alt="Top-down view of the empty hexagonal container"></figure>
+    </div>
+
+    <div class="project-section">
+      <h3>Building &amp; Analysis</h3>
+      <p>I laser cut the parts, trying to maximize material usage across the sheet, and printed multiple sets after breaking a few tabs on earlier attempts. I ran friction-fit tests across several tab sizes — the difference between sizes was much larger than I expected, and orthogonal joints fit noticeably better. My ideal fit turned out to be a 0.5" tab with a 0.47" spacer.</p>
+    </div>
+
+    <div class="photo-gallery">
+      <figure><img src="../assets/images/container-laser-parts.jpg" alt="Laser cut parts ready for assembly"></figure>
+      <figure><img src="../assets/images/container-lasercutter.jpg" alt="Cutting parts on the laser cutter"></figure>
+      <figure><img src="../assets/images/container-final-1.jpg" alt="Finished container"></figure>
+    </div>
+
+    <div class="project-section">
+      <h3>Reflection</h3>
+      <p>My sketches and prototypes helped me settle on a shape, but I didn't fully anticipate how hard it would be to make a hexagonal container where all the friction fits worked together — I had to redo my tabs after initially only changing the female ones, and reprint pieces that splintered from careless handling. In general, the container turned out about as I expected, but I'd like to try a 3D printed base to help align the joints, and remake the tabs longer for more surface area in the fit.</p>
+    </div>
+
+    <div class="project-section">
+      <h3>Skills</h3>
+      <div class="tag-row">
+        <span class="tag">Laser Cutting</span>
+        <span class="tag">Friction Fit Design</span>
+        <span class="tag">CAD</span>
+        <span class="tag">Iterative Prototyping</span>
+      </div>
+    </div>
+
+    <a class="back-link" href="../coursework.html">&larr; Back to coursework</a>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <span>&copy; <span id="year"></span> Lucinda (Luca) Higgins</span>
+    <span>
+      <a href="mailto:latwist@stanford.edu">latwist@stanford.edu</a> &middot;
+      <a href="https://www.linkedin.com/in/lucahiggins/" target="_blank" rel="noopener">LinkedIn</a>
+    </span>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

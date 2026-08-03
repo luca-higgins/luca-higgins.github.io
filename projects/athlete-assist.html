@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Athlete Assist — Luca Higgins</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-inner">
+    <a class="brand" href="../index.html">luca<span>.</span>higgins</a>
+    <input type="checkbox" id="nav-toggle">
+    <label for="nav-toggle" class="nav-toggle-label">&#9776;</label>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../projects.html">Projects</a></li>
+        <li><a href="../coursework.html">Coursework</a></li>
+        <li><a href="../resume.html">Resume</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <a class="back-link" style="color:#cbd5e1;" href="../coursework.html">&larr; All coursework</a>
+    <div class="eyebrow" style="margin-top:14px;">Coursework &middot; ME 102, Project 2</div>
+    <h1>Athlete Assist</h1>
+    <p class="lead">A lead-screw-actuated scissor lift, built with Pierce Thompson to reach 12 inches of extension with minimal material and cost.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+
+    <div class="project-meta">
+      <div><strong>Course</strong>ME 102, Product Realization Lab</div>
+      <div><strong>Timeline</strong>Winter 2026</div>
+      <div><strong>Team</strong>Luca Higgins, Pierce Thompson</div>
+      <div><strong>Processes</strong>Laser cutting, 3D printing, mechanism design</div>
+    </div>
+
+    <div class="project-section">
+      <h3>Objective</h3>
+      <p>Design a lift mechanism optimized to reduce material usage and cost while reaching a total extension of 12 inches — double the standard 6-inch target. We also wanted the final build to look exceptionally clean and professional, which shaped a lot of our design decisions. We settled on a scissor lift, since it offered large displacement in a minimal footprint while still looking sharp, actuated by a lead screw we kept from our initial mechanical design research.</p>
+    </div>
+
+    <div class="photo-gallery featured">
+      <figure><img src="../assets/images/athlete-assist-hero.jpg" alt="Finished scissor lift, fully extended"></figure>
+      <figure><img src="../assets/images/athlete-assist-final-rings.jpg" alt="Finished lift with laser-etched Olympic rings"></figure>
+    </div>
+
+    <div class="project-section">
+      <h3>Prototyping</h3>
+      <p>During rapid prototyping, we experimented with a cardboard scissor lift, reasoning that any difficulties in our final design would show up more obviously in cardboard first. That prototype revealed that joint placement precision significantly affected friction and performance, that the bottom members would see the greatest stress, and that the lift swayed laterally once fully extended.</p>
+    </div>
+
+    <div class="photo-gallery">
+      <figure><img src="../assets/images/athlete-assist-cardboard-prototype.jpg" alt="Cardboard scissor lift prototype"></figure>
+      <figure><img src="../assets/images/athlete-assist-team.jpg" alt="Building the prototype at the workbench"></figure>
+    </div>
+
+    <div class="project-section">
+      <h3>Materials, Building &amp; Analysis</h3>
+      <p>We used laser-cut acrylic for the scissor members and 3D printed PLA for the base, lead screw, pins, and shelf — acrylic was available in scrap, strong enough for the payload, and quick to manufacture in quantity. Bearings friction-fit into each member let the lift expand and contract with minimal resistance while staying rigid. The 3D printed pins turned out to be the weak point, and we did see some cracking under pressure, but the acrylic members handled loads well beyond our 2.5 lb goal, and the lead screw lifted the load with acceptable friction. We also solved an early leverage issue by starting the lift slightly above fully collapsed, and added base tracks to keep both scissors extending evenly.</p>
+    </div>
+
+    <div class="photo-gallery">
+      <figure><img src="../assets/images/athlete-assist-testing.jpg" alt="Testing the fully extended lift"></figure>
+      <figure><img src="../assets/images/athlete-assist-rings-detail.jpg" alt="Detail of the acrylic scissor members with Olympic rings"></figure>
+      <figure><img src="../assets/images/athlete-assist-final-2.jpg" alt="Finished lift, assembled"></figure>
+    </div>
+
+    <div class="project-section">
+      <h3>Reflection</h3>
+      <p>We hit our goal of 12 inches of extension with minimal material and cost, and had some fun adding unique details — sanding the acrylic members for a frosted look, multi-material-printing Olympic rings into the top (it happened to be an Olympic year), and adding a lift to the base once we realized it needed one. For a future version, we'd consider a skirt to cover the extending mechanism, or a metal lead screw to reduce flex even further.</p>
+    </div>
+
+    <div class="project-section">
+      <h3>Skills</h3>
+      <div class="tag-row">
+        <span class="tag">Mechanism Design</span>
+        <span class="tag">Laser Cutting</span>
+        <span class="tag">3D Printing</span>
+        <span class="tag">Load Analysis</span>
+        <span class="tag">Team Collaboration</span>
+      </div>
+    </div>
+
+    <a class="back-link" href="../coursework.html">&larr; Back to coursework</a>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <span>&copy; <span id="year"></span> Lucinda (Luca) Higgins</span>
+    <span>
+      <a href="mailto:latwist@stanford.edu">latwist@stanford.edu</a> &middot;
+      <a href="https://www.linkedin.com/in/lucahiggins/" target="_blank" rel="noopener">LinkedIn</a>
+    </span>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

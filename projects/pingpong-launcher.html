@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ping Pong Ball Launcher — Luca Higgins</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-inner">
+    <a class="brand" href="../index.html">luca<span>.</span>higgins</a>
+    <input type="checkbox" id="nav-toggle">
+    <label for="nav-toggle" class="nav-toggle-label">&#9776;</label>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../projects.html">Projects</a></li>
+        <li><a href="../coursework.html">Coursework</a></li>
+        <li><a href="../resume.html">Resume</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <a class="back-link" style="color:#cbd5e1;" href="../coursework.html">&larr; All coursework</a>
+    <div class="eyebrow" style="margin-top:14px;">Coursework &middot; ME 102, Project 3</div>
+    <h1>Ping Pong Ball Launcher</h1>
+    <p class="lead">A cam-actuated, spring-driven launcher built with a four-person team, iterated through five prototypes.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+
+    <div class="project-meta">
+      <div><strong>Course</strong>ME 102, Product Realization Lab</div>
+      <div><strong>Timeline</strong>Winter 2026</div>
+      <div><strong>Team</strong>Luca Higgins, Pierce Thompson, Daisy Li, Marina Castilla-Liu</div>
+      <div><strong>Processes</strong>3D printing, mechanism design, iterative prototyping</div>
+    </div>
+
+    <div class="project-section">
+      <h3>Objective</h3>
+      <p>Build a mechanism that launches ping pong balls, with a reload and release cycle that's easy to repeat and doesn't vary much shot to shot. Our early sketches centered on choosing the right actuation method before committing to a final design.</p>
+    </div>
+
+    <div class="photo-gallery featured">
+      <figure><img src="../assets/images/pingpong-hero.jpg" alt="Final launcher, product shot"></figure>
+      <figure><img src="../assets/images/pingpong-final-1.jpg" alt="Finished launcher, three-quarter view"></figure>
+    </div>
+
+    <div class="project-section">
+      <h3>Design Evolution</h3>
+      <p>We settled on a cam-driven spring mechanism and iterated through it in stages: power mechanism selection and refinement &rarr; actuation mechanism selection &rarr; barrel refinement &rarr; funnel and reloading implementation &rarr; support implementation &rarr; support and accuracy refinement.</p>
+    </div>
+
+    <div class="project-section">
+      <h3>Prototypes</h3>
+      <p>Each prototype answered a specific question. Prototype 1 tested whether extension springs could reliably drive the launch — it worked, with a displacement range of 1 to 2.5 inches. Prototype 2 tested cam actuation and found that acrylic cams against a metal rod ran with relatively little friction. Prototype 3 loosened the barrel to a half-pipe design, cutting friction further and improving power and accuracy. Prototype 4 added a latch synced to the cams so the funnel could reload one ball at a time. The final version reinforced the front support with four additional attachment points, meaningfully improving accuracy.</p>
+    </div>
+
+    <div class="photo-gallery">
+      <figure><img src="../assets/images/pingpong-team-building.jpg" alt="Team building the launcher at the workbench"></figure>
+      <figure><img src="../assets/images/pingpong-assembly-closeup.jpg" alt="Close-up of the cam and spring assembly"></figure>
+      <figure><img src="../assets/images/pingpong-sideview.jpg" alt="Side view of the final launcher"></figure>
+    </div>
+
+    <div class="project-section">
+      <h3>Analysis &amp; Engineering Drawings</h3>
+      <p>We worked through the spring and ballistics calculations by hand to size the driving mechanism, then produced full assembly and part drawings for fabrication.</p>
+    </div>
+
+    <div class="photo-gallery">
+      <figure><img src="../assets/images/pingpong-assembly-drawing.jpg" alt="Assembly drawing of the launcher"></figure>
+      <figure><img src="../assets/images/pingpong-final-2.jpg" alt="Finished launcher, alternate angle"></figure>
+    </div>
+
+    <div class="project-section">
+      <h3>Reflection</h3>
+      <p>Our two main challenges were power — balls lost momentum before launch, solved with a looser barrel and tighter tolerances — and accuracy, which was inconsistent after assembly until we significantly shortened the barrel. Reloading worked well from the start and was straightforward to implement, and our time management kept the build well-paced throughout. For a next iteration, we'd downsize the spring for similar performance with less weight, and adjust the reload mechanism so balls don't pop up out of the funnel.</p>
+    </div>
+
+    <div class="project-section">
+      <h3>Skills</h3>
+      <div class="tag-row">
+        <span class="tag">Mechanism Design</span>
+        <span class="tag">3D Printing</span>
+        <span class="tag">Engineering Drawings</span>
+        <span class="tag">Iterative Prototyping</span>
+        <span class="tag">Team Collaboration</span>
+      </div>
+    </div>
+
+    <a class="back-link" href="../coursework.html">&larr; Back to coursework</a>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <span>&copy; <span id="year"></span> Lucinda (Luca) Higgins</span>
+    <span>
+      <a href="mailto:latwist@stanford.edu">latwist@stanford.edu</a> &middot;
+      <a href="https://www.linkedin.com/in/lucahiggins/" target="_blank" rel="noopener">LinkedIn</a>
+    </span>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

@@ -235,3 +235,26 @@ footer.site-footer a { color: #cbd5e1; }
 /* ---------- Contact ---------- */
 .contact-list { list-style: none; padding: 0; font-family: var(--mono); font-size: 1rem; }
 .contact-list li { padding: 12px 0; border-bottom: 1px solid var(--line); }
+
+/* ---------- Photo gallery ---------- */
+.photo-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 14px;
+  margin: 24px 0;
+}
+.photo-gallery img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+}
+.photo-gallery figure { margin: 0; }
+.photo-gallery figcaption {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  color: var(--slate);
+  margin-top: 6px;
+}
+.photo-gallery.featured img { height: 320px; }

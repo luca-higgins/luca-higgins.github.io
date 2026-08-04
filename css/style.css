@@ -309,8 +309,19 @@ body, header.site-header, footer.site-footer, .hero, section.alt, .card, .tag {
   border-radius: 999px;
   padding: 6px;
   display: flex;
+  align-items: center;
   gap: 4px;
   box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+  max-width: calc(100vw - 36px);
+  overflow-x: auto;
+}
+.switcher-group { display: flex; gap: 4px; }
+.switcher-divider {
+  width: 1px;
+  height: 20px;
+  background: rgba(255,255,255,0.15);
+  margin: 0 2px;
+  flex-shrink: 0;
 }
 .theme-switcher button {
   font-family: var(--mono);
@@ -321,6 +332,7 @@ body, header.site-header, footer.site-footer, .hero, section.alt, .card, .tag {
   background: transparent;
   color: #cbd5e1;
   cursor: pointer;
+  white-space: nowrap;
 }
 .theme-switcher button:hover { color: #fff; }
 .theme-switcher button.active {
@@ -376,3 +388,111 @@ body, header.site-header, footer.site-footer, .hero, section.alt, .card, .tag {
   border-radius: 10px;
   border: 1px solid var(--line);
 }
+
+/* =====================================================================
+   LAYOUT VARIANTS (temporary, for experimenting with structure)
+   ===================================================================== */
+
+/* ---------- Sidebar layout ---------- */
+@media (min-width: 901px) {
+  [data-layout="sidebar"] header.site-header {
+    position: fixed;
+    top: 0; left: 0; bottom: 0;
+    width: 220px;
+    height: 100vh;
+    border-right: 1px solid rgba(255,255,255,0.08);
+    border-bottom: none;
+    overflow-y: auto;
+  }
+  [data-layout="sidebar"] .nav-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    height: 100%;
+    padding: 32px 24px;
+    max-width: none;
+  }
+  [data-layout="sidebar"] .brand { font-size: 1.15rem; }
+  [data-layout="sidebar"] #nav-toggle,
+  [data-layout="sidebar"] .nav-toggle-label { display: none; }
+  [data-layout="sidebar"] nav.main-nav {
+    display: block;
+    width: 100%;
+    margin-top: 40px;
+  }
+  [data-layout="sidebar"] nav.main-nav ul {
+    flex-direction: column;
+    gap: 6px;
+  }
+  [data-layout="sidebar"] nav.main-nav a {
+    display: block;
+    padding: 8px 0;
+  }
+  [data-layout="sidebar"] body {
+    padding-left: 220px;
+  }
+  [data-layout="sidebar"] footer.site-footer .footer-inner {
+    max-width: 860px;
+  }
+}
+
+/* ---------- Editorial layout ---------- */
+[data-layout="editorial"] .hero {
+  background: var(--paper);
+  color: var(--ink);
+  padding: 56px 0 64px;
+  border-bottom: 3px solid var(--ink);
+}
+[data-layout="editorial"] .hero .eyebrow { color: var(--ink); }
+[data-layout="editorial"] .hero h1 {
+  color: var(--ink);
+  font-size: clamp(2.6rem, 6.5vw, 4.6rem);
+  letter-spacing: -0.02em;
+}
+[data-layout="editorial"] .hero p.lead { color: var(--slate); }
+[data-layout="editorial"] .hero .btn-ghost { border-color: var(--ink); color: var(--ink); }
+[data-layout="editorial"] .hero .btn-ghost:hover { border-color: var(--accent); color: var(--ink); }
+
+[data-layout="editorial"] .grid {
+  grid-template-columns: 1fr;
+  gap: 0;
+}
+[data-layout="editorial"] .card {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--line);
+  border-radius: 0;
+  padding: 28px 4px;
+}
+[data-layout="editorial"] .card:hover {
+  transform: none;
+  box-shadow: none;
+  background: rgba(0,0,0,0.02);
+}
+[data-layout="editorial"] .card.has-thumb {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 24px;
+  align-items: center;
+  padding: 20px 4px;
+}
+[data-layout="editorial"] .card-thumb {
+  height: 140px;
+  border-radius: 0;
+  border: 1px solid var(--line);
+}
+[data-layout="editorial"] .card.has-thumb .card-body { padding: 0; }
+[data-layout="editorial"] h2 { font-size: clamp(1.9rem, 4vw, 2.6rem); }
+[data-layout="editorial"] .tag { border-radius: 0; }
+[data-layout="editorial"] section.alt { border-left: none; border-right: none; }
+
+@media (max-width: 640px) {
+  [data-layout="editorial"] .card.has-thumb {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------- Hero back-link (adapts to hero background) ---------- */
+.back-link-hero { color: #cbd5e1; }
+.back-link-hero:hover { color: #fff; }
+[data-layout="editorial"] .back-link-hero { color: var(--slate); }
+[data-layout="editorial"] .back-link-hero:hover { color: var(--ink); }

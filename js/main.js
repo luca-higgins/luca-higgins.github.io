@@ -9,38 +9,22 @@ document.addEventListener('DOMContentLoaded', function () {
   var yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-  // ---------- Temporary theme switcher (for trying out color palettes) ----------
+  // ---------- Temporary switcher: color theme + layout (for experimenting) ----------
   var THEMES = [
     { id: 'harbor', label: 'Harbor' },
     { id: 'cardinal', label: 'Cardinal' },
     { id: 'workshop', label: 'Workshop' }
   ];
-  var saved = localStorage.getItem('site-theme') || 'harbor';
-  applyTheme(saved);
+  var LAYOUTS = [
+    { id: 'classic', label: 'Classic' },
+    { id: 'sidebar', label: 'Sidebar' },
+    { id: 'editorial', label: 'Editorial' }
+  ];
 
-  var switcher = document.createElement('div');
-  switcher.className = 'theme-switcher';
-  THEMES.forEach(function (theme) {
-    var btn = document.createElement('button');
-    btn.textContent = theme.label;
-    btn.dataset.themeId = theme.id;
-    if (theme.id === saved) btn.classList.add('active');
-    btn.addEventListener('click', function () {
-      applyTheme(theme.id);
-      localStorage.setItem('site-theme', theme.id);
-      switcher.querySelectorAll('button').forEach(function (b) {
-        b.classList.toggle('active', b.dataset.themeId === theme.id);
-      });
-    });
-    switcher.appendChild(btn);
-  });
-  document.body.appendChild(switcher);
+  var savedTheme = localStorage.getItem('site-theme') || 'harbor';
+  var savedLayout = localStorage.getItem('site-layout') || 'classic';
+  applyTheme(savedTheme);
+  applyLayout(savedLayout);
 
-  function applyTheme(id) {
-    if (id === 'harbor') {
-      document.documentElement.removeAttribute('data-theme');
-    } else {
-      document.documentElement.setAttribute('data-theme', id);
-    }
-  }
-});
+  var wrap = document.createElement('div');
+  wrap.className = 'theme-switcher';

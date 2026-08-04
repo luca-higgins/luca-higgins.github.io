@@ -13,12 +13,14 @@ document.addEventListener('DOMContentLoaded', function () {
   var THEMES = [
     { id: 'harbor', label: 'Harbor' },
     { id: 'cardinal', label: 'Cardinal' },
-    { id: 'workshop', label: 'Workshop' }
+    { id: 'workshop', label: 'Workshop' },
+    { id: 'botanical', label: 'Botanical' }
   ];
   var LAYOUTS = [
     { id: 'classic', label: 'Classic' },
     { id: 'sidebar', label: 'Sidebar' },
-    { id: 'editorial', label: 'Editorial' }
+    { id: 'editorial', label: 'Editorial' },
+    { id: 'drafting', label: 'Drafting' }
   ];
 
   var savedTheme = localStorage.getItem('site-theme') || 'harbor';

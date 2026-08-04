@@ -30,7 +30,7 @@
 
 <section class="hero">
   <div class="container">
-    <a class="back-link" style="color:#cbd5e1;" href="../projects.html">&larr; All projects</a>
+    <a class="back-link back-link-hero" href="../projects.html">&larr; All projects</a>
     <div class="eyebrow" style="margin-top:14px;">Research</div>
     <h1>Reconfigurable Rings</h1>
     <p class="lead">Predicting elastic rod buckling behavior to inform reconfigurable structure design.</p>
@@ -43,8 +43,8 @@
     <div class="project-meta">
       <div><strong>Timeline</strong>Winter 2025 – Summer 2025</div>
       <div><strong>Lab</strong>Soft Intelligent Materials Laboratory (PI: Prof. Renee Zhao)</div>
-      <div><strong>Collaborators</strong>Dr. Jeseung Lee (Zhao Lab), Prof. Wei Chen's Lab (Northwestern University)</div>
-      <div><strong>Links</strong><a href="https://zhaolab.stanford.edu/" target="_blank" rel="noopener">Zhao Lab</a></div>
+      <div><strong>Collaborators</strong>Jeseung Lee, Lu Lu, Sophie Leanza (Zhao Lab)</div>
+      <div><strong>Links</strong><a href="https://zhaolab.stanford.edu/" target="_blank" rel="noopener">Zhao Lab</a> &middot; <a href="../assets/documents/rings-suri-poster.pdf" target="_blank">Research Poster (PDF)</a></div>
     </div>
 
     <div class="project-section">
@@ -54,30 +54,57 @@
 
     <div class="project-section">
       <h3>Background</h3>
-      <p>The overall goal of the project was to understand the capabilities of reconfigurable rings and how their stabilities and instabilities can be useful in reconfigurable structures. When these rods are compressed, many experience "snapping" — sudden buckling elastic rod movements during both loading and unloading. We wanted to predict specific buckling behavior based on ring parameters.</p>
+      <p>Naturally curved elastic rods are 3D-printed spirals with a parameterized radius, height, thickness, and length. The radius sets the rod's "natural curvature" (&kappa;<sub>n</sub> = 1/R). When compressed, many of these rods "snap" — undergo sudden buckling movements during both loading and unloading — and their geometry governs exactly when and how that snap-through instability occurs (<a href="https://doi.org/10.1073/pnas.2405744121" target="_blank" rel="noopener">Lu, Leanza, Dai, Hutchinson &amp; Zhao, <em>PNAS</em>, 2024</a>).</p>
     </div>
 
     <div class="project-section">
       <h3>My Role &amp; Contribution</h3>
-      <p>I modeled, 3D printed, and tested over 100 different rod configurations with varying cross-section dimensions, lengths, and radii.</p>
+      <p>I modeled, 3D printed, and tested over 100 different rod configurations with varying cross-section dimensions, lengths, and radii, presenting this work through Stanford's SURI program.</p>
     </div>
 
-    <div class="image-placeholder">Add photos of the ring/rod prototypes and testing setup here<br>(e.g. ../assets/images/rings-1.jpg)</div>
+    <div class="photo-gallery">
+      <figure><img src="../assets/images/rings-natural-curvature-diagram.jpg" alt="Diagram of a naturally curved elastic rod showing radius R and natural curvature kappa-n equals 1 over R"><figcaption>A rod's natural curvature is set by its radius.</figcaption></figure>
+    </div>
+
+    <div class="project-section">
+      <h3>Mechanical Testing Method</h3>
+      <p>Little was known about naturally curved elastic rods at a quantitative level, so I tested 50 semi-random 3D-printed PLA samples with varying radii, lengths, heights, and thicknesses — PLA offered enough elasticity for the objective with an added ease of fabrication. Each rod was cyclically compressed six times in an Instron tensile tester, with the first and sixth cycles recorded on video, generating a force-vs-displacement graph for each sample to identify buckling behavior, plastic deformation, and snapping.</p>
+    </div>
+
+    <div class="project-section">
+      <h3>Buckling Case Classification</h3>
+      <p>Individual rods buckled in one of four primary cases: in-plane buckling at the start with slow out-of-plane buckling and snapping by the end (Case 1); the same, but with sudden snapping (Case 2); in-plane buckling throughout (Case 3); or out-of-plane buckling throughout (Case 4). Of the first 50 samples, 27 were Case 3, 10 were Case 4, and only 14 showed any snapping behavior at all — so a second testing phase intentionally targeted samples more likely to snap, to balance the dataset across all four cases. That phase showed that lengthening a Case 3 rod could shift it into Case 2, inducing snapping. Rods with a large length and small radius tended to buckle in unusual, multi-loop patterns that fell outside the four main cases, and some samples snapped during unloading as well as loading, buckling around themselves and uncoiling with a snap.</p>
+    </div>
+
+    <div class="photo-gallery">
+      <figure><img src="../assets/images/rings-buckling-cases.jpg" alt="Four photos of rods mounted in an Instron tensile tester, showing Case 1 through Case 4 buckling behavior"><figcaption>The four buckling cases, tested in an Instron tensile tester.</figcaption></figure>
+    </div>
+
+    <div class="project-section">
+      <h3>System Design</h3>
+      <p>This component-level data informed multistable systems built from the same rods. A 12-rod system with four clamped, radius-varying rod sets reaches four distinct stable states as individual rods snap between them. A hexagonal system built from six identical rods reaches five stable states across a full rotation, visibly reconfiguring its shape at each 60&deg; increment. The same principles fed into a reconfigurable spinning robot that folds its rods inward to switch between an expanded and a more condensed shape.</p>
+    </div>
+
+    <div class="photo-gallery">
+      <figure><img src="../assets/images/rings-hexagonal-system.jpg" alt="Ten photos of a hexagonal system built from six identical rods, showing five stable states from top and front views"><figcaption>A hexagonal 6-rod system with five stable states.</figcaption></figure>
+      <figure><img src="../assets/images/rings-spinning-robot.jpg" alt="Photos of a reconfigurable spinning robot folding its rods from an expanded to a condensed shape"><figcaption>A reconfigurable spinning robot, expanded and folded.</figcaption></figure>
+    </div>
 
     <div class="project-section">
       <h3>Outcome</h3>
-      <p>Our data points helped develop software for predicting buckling behavior, specifically singling out snap-through behavior. This data and prediction will inform the creation of new reconfigurable structures.</p>
+      <p>Our data points helped develop software for predicting buckling behavior, specifically singling out snap-through behavior, and directly informed the 12-rod and hexagonal multistable systems and the reconfigurable spinning robot shown above.</p>
     </div>
 
     <div class="project-section">
       <h3>Future Work</h3>
-      <p>A reconfigurable spinning robot that folds its rods into a more condensed shape, and systems with multiple stable states.</p>
+      <p>Reducing measurement uncertainty in testing — samples can respond to tenths-of-a-newton force disturbances — and further defining the unusual, multi-loop buckling cases that fell outside the four main categories. More broadly, applying this data to new reconfigurable structures and robotics.</p>
     </div>
 
     <div class="project-section">
       <h3>Skills</h3>
       <div class="tag-row">
         <span class="tag">3D Printing / Fabrication</span>
+        <span class="tag">Mechanical Testing</span>
         <span class="tag">Pattern Analysis</span>
         <span class="tag">Data Sorting &amp; Spreadsheets</span>
       </div>

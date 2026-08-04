@@ -284,7 +284,7 @@ footer.site-footer a { color: #cbd5e1; }
 /* ---------- Photo gallery ---------- */
 .photo-gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 320px));
+  grid-template-columns: repeat(auto-fit, minmax(130px, 240px));
   justify-content: center;
   gap: 12px;
   margin: 24px 0;
@@ -305,7 +305,7 @@ footer.site-footer a { color: #cbd5e1; }
   margin-top: 6px;
 }
 .photo-gallery.featured {
-  grid-template-columns: repeat(auto-fit, minmax(260px, 420px));
+  grid-template-columns: repeat(auto-fit, minmax(180px, 300px));
 }
 
 /* ---------- Theme transition ---------- */

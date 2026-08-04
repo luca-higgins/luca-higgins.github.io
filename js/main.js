@@ -35,11 +35,18 @@ document.addEventListener('DOMContentLoaded', function () {
     { id: 'editorial', label: 'Editorial' },
     { id: 'drafting', label: 'Drafting' }
   ];
+  var FONTS = [
+    { id: 'inter', label: 'Inter' },
+    { id: 'grotesk', label: 'Grotesk' },
+    { id: 'serif', label: 'Serif' }
+  ];
 
   var savedTheme = localStorage.getItem('site-theme') || 'harbor';
   var savedLayout = localStorage.getItem('site-layout') || 'classic';
+  var savedFont = localStorage.getItem('site-font') || 'inter';
   applyTheme(savedTheme);
   applyLayout(savedLayout);
+  applyFont(savedFont);
 
   var wrap = document.createElement('div');
   wrap.className = 'theme-switcher';
@@ -54,10 +61,18 @@ document.addEventListener('DOMContentLoaded', function () {
     applyLayout(id);
     localStorage.setItem('site-layout', id);
   });
+  var divider2 = document.createElement('span');
+  divider2.className = 'switcher-divider';
+  var fontGroup = buildGroup(FONTS, savedFont, function (id) {
+    applyFont(id);
+    localStorage.setItem('site-font', id);
+  });
 
   wrap.appendChild(themeGroup);
   wrap.appendChild(divider);
   wrap.appendChild(layoutGroup);
+  wrap.appendChild(divider2);
+  wrap.appendChild(fontGroup);
   document.body.appendChild(wrap);
 
   function buildGroup(options, current, onPick) {
@@ -92,6 +107,14 @@ document.addEventListener('DOMContentLoaded', function () {
       document.documentElement.removeAttribute('data-layout');
     } else {
       document.documentElement.setAttribute('data-layout', id);
+    }
+  }
+
+  function applyFont(id) {
+    if (id === 'inter') {
+      document.documentElement.removeAttribute('data-font');
+    } else {
+      document.documentElement.setAttribute('data-font', id);
     }
   }
 });

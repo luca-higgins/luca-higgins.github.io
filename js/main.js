@@ -9,12 +9,25 @@ document.addEventListener('DOMContentLoaded', function () {
   var yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
+  // ---------- Make whole cards clickable (not just "View project") ----------
+  document.querySelectorAll('.card').forEach(function (card) {
+    var link = card.querySelector('a.card-link');
+    if (!link) return;
+    card.classList.add('card-clickable');
+    card.addEventListener('click', function (e) {
+      if (e.target.closest('a')) return; // let real links behave normally
+      var href = link.getAttribute('href');
+      if (href) window.location.href = href;
+    });
+  });
+
   // ---------- Temporary switcher: color theme + layout (for experimenting) ----------
   var THEMES = [
     { id: 'harbor', label: 'Harbor' },
     { id: 'cardinal', label: 'Cardinal' },
     { id: 'workshop', label: 'Workshop' },
-    { id: 'botanical', label: 'Botanical' }
+    { id: 'botanical', label: 'Botanical' },
+    { id: 'willow', label: 'Willow' }
   ];
   var LAYOUTS = [
     { id: 'classic', label: 'Classic' },

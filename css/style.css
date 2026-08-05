@@ -307,6 +307,12 @@ footer.site-footer a { color: #cbd5e1; }
 .photo-gallery.featured {
   grid-template-columns: repeat(auto-fit, minmax(260px, 420px));
 }
+.photo-gallery.full {
+  grid-template-columns: 1fr;
+}
+.photo-gallery.full figcaption {
+  text-align: center;
+}
 
 /* ---------- Hero photo collage ---------- */
 .hero-grid {

@@ -365,3 +365,61 @@ footer.site-footer a { color: #cbd5e1; }
 /* ---------- Hero back-link (adapts to hero background) ---------- */
 .back-link-hero { color: #cbd5e1; }
 .back-link-hero:hover { color: #fff; }
+
+/* ---------- Subtle animation: hero fade-in ---------- */
+.hero .container > * {
+  opacity: 0;
+  transform: translateY(14px);
+  animation: heroIn 0.6s ease-out forwards;
+}
+.hero .container > *:nth-child(1) { animation-delay: 0s; }
+.hero .container > *:nth-child(2) { animation-delay: 0.08s; }
+.hero .container > *:nth-child(3) { animation-delay: 0.16s; }
+.hero .container > *:nth-child(4) { animation-delay: 0.24s; }
+.hero .container > *:nth-child(5) { animation-delay: 0.32s; }
+.hero-grid > .hero-collage { animation-delay: 0.12s; }
+@keyframes heroIn { to { opacity: 1; transform: translateY(0); } }
+
+/* ---------- Subtle animation: reveal-on-scroll ---------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+.reveal.in-view { opacity: 1; transform: translateY(0); }
+
+/* ---------- Subtle animation: button press feedback ---------- */
+.btn { transition: transform 0.15s ease, background 0.15s ease, color 0.15s ease, border-color 0.15s ease; }
+.btn:active { transform: scale(0.97); }
+.card-link { transition: color 0.15s ease; }
+
+/* ---------- Hero role tagline + typewriter cycle ---------- */
+.hero-role {
+  font-family: var(--mono);
+  font-size: 1.05rem;
+  color: var(--accent);
+  margin: 6px 0 18px;
+}
+.cycle-text { color: #fff; font-weight: 600; }
+.cycle-text::after {
+  content: "";
+  display: inline-block;
+  width: 2px;
+  height: 1em;
+  background: var(--accent);
+  margin-left: 3px;
+  vertical-align: -0.15em;
+  animation: caretBlink 0.9s steps(1) infinite;
+}
+
+/* ---------- Respect reduced-motion preference ---------- */
+@media (prefers-reduced-motion: reduce) {
+  .hero .container > *, .reveal {
+    animation: none !important;
+    transition: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  .cycle-text::after { animation: none; }
+}
+@keyframes caretBlink { 50% { opacity: 0; } }
